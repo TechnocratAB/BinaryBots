@@ -1,0 +1,80 @@
+:root{
+	--color-one: #333;
+	--color-two: #000;
+	--color-three: #8980f5;
+	--color-four: #fff;
+	--color-five: #f2be8d;
+	--color-six: #00a7b3;
+	--color-seven: #f2e477;
+	--color-eight: #E7EDF6;
+}
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	outline:none !important;
+}
+
+body {
+    background-color: var(--color-one);
+}
+
+.navb {
+	width:100%;
+	position:fixed;
+	top:0;
+	z-index:999;
+	padding: 1vw 2vw;
+	transition: 0.6s;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.navb h1 {
+	color: var(--color-three);
+	font-size: 2vw;
+	font-family: 'Poiret One', cursive;
+	float:left;
+	margin-left: 2vw;
+	transition: 0.6s;
+    
+}
+
+.navb .bar{
+	padding-right: 3vw;
+}
+
+.navb .bar a{
+	float: right;
+    display: block;
+	color: var(--color-four);
+	font-size: 1.1vw;
+	font-family: 'Poppins', sans-serif;
+	text-decoration: none;
+	padding: 0.5vw 1vw;
+	margin-right: 0.5;
+    position: relative;
+    transition: 0.5s;
+}
+
+.navb a::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: var(--color-three);
+    height: 2px;
+    transition: all 0.6s;
+}
+
+.navb a:hover::after {
+    width: 100%;
+}
+
+.navb .bar a:hover{
+	color: var(--color-three);
+}
